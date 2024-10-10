@@ -1,0 +1,4 @@
+.env
+*.key
+*.git
+*/venv/*
