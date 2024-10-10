@@ -24,7 +24,7 @@ ARGS = {
 
 # File to download
 # Reference: https://grouplens.org/datasets/movielens/
-FILE = "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip"
+FILE = "https://files.grouplens.org/datasets/movielens/ml-latest.zip"
 
 # Local data path
 DATA_PATH = "/home/airflow/gcs/data/movielens/"
