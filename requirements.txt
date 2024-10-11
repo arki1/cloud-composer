@@ -1,8 +1,8 @@
 git+https://github.com/GoogleCloudPlatform/composer-local-dev.git
+requests==2.31.0
+
 apache-airflow==2.9.3
 apache-airflow-providers-mysql==5.7.1
 apache-airflow-providers-postgres==5.13.0
 apache-airflow-providers-google>=10
 apache-airflow-providers-sendgrid==3.6.0
-pytest==8.3.3
-requests==2.31.0

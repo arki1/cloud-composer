@@ -60,3 +60,18 @@ Python program:
 ```
 python dags/movielens_etl.py
 ```
+
+
+## Deploy Dags to Storage
+
+You can deploy the dags using the following command:
+
+```
+PROD_DAGS="$(gcloud composer environments describe prod-env \
+    --location=us-central1 --format='get(config.dagGcsPrefix)')"
+
+gcloud storage rsync dags $PROD_DAGS \
+    --exclude='.*__pycache__.*' \
+    --recursive \
+    --delete-unmatched-destination-objects
+```
