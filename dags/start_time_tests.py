@@ -9,7 +9,7 @@ from airflow.operators.empty import EmptyOperator
 # and keep running every day at 22h30.
 
 # To make easier to understand, lets store the "first execution" as a variable
-first_run = pendulum.datetime(2024, 10, 14, 22, 30, tz='America/Sao_Paulo')
+first_run = pendulum.datetime(2024, 10, 15, 22, 30, tz='America/Sao_Paulo')
 # ... note that we pass a timezone, so the schedule + start time are timezone aware:
 # https://airflow.apache.org/docs/apache-airflow/2.10.2/authoring-and-scheduling/timezone.html#time-zone-aware-dags 
 
@@ -24,7 +24,7 @@ schedule="30 22 * * *"
 
 # We also set catchup = False to avoid "automatically backfilling" previous intervals.
 with DAG(
-        dag_id="should_start_at_20241410_2230",
+        dag_id="should_start_at_20241015_2230",
         start_date=start_date,
         schedule=schedule,
         catchup=False,
